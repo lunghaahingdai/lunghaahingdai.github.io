@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="175.31693mm"
+   height="44.088375mm"
+   viewBox="0 0 175.31693 44.088375"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="lhlogo_with_text.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.69219276"
+     inkscape:cx="342.39017"
+     inkscape:cy="377.78494"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.653826,-48.649605)">
+    <g
+       id="g25"
+       transform="matrix(8.3914957,0,0,8.3914957,-1346.4678,-1880.2411)">
+      <g
+         fill="#a02c2c"
+         id="g16"
+         transform="matrix(0.02549901,0,0,0.02549901,161.31004,227.84928)">
+        <rect
+           x="100"
+           y="100"
+           width="10"
+           height="175"
+           id="rect1" />
+        <rect
+           x="290"
+           y="100"
+           width="10"
+           height="175"
+           id="rect2" />
+        <rect
+           x="50"
+           y="150"
+           width="110"
+           height="10"
+           id="rect3" />
+        <rect
+           x="240"
+           y="150"
+           width="110"
+           height="10"
+           id="rect4" />
+        <rect
+           x="50"
+           y="175"
+           width="300"
+           height="10"
+           id="rect5" />
+        <rect
+           x="50"
+           y="200"
+           width="300"
+           height="10"
+           id="rect6" />
+        <rect
+           x="50"
+           y="225"
+           width="300"
+           height="10"
+           id="rect7" />
+        <rect
+           x="50"
+           y="250"
+           width="300"
+           height="10"
+           id="rect8" />
+        <rect
+           x="50"
+           y="275"
+           width="300"
+           height="10"
+           id="rect9" />
+        <rect
+           x="50"
+           y="100"
+           width="10"
+           height="55"
+           id="rect10" />
+        <rect
+           x="340"
+           y="100"
+           width="10"
+           height="55"
+           id="rect11" />
+        <rect
+           x="150"
+           y="100"
+           width="10"
+           height="55"
+           id="rect12" />
+        <rect
+           x="240"
+           y="100"
+           width="10"
+           height="55"
+           id="rect13" />
+        <circle
+           cx="55"
+           cy="100"
+           r="20"
+           stroke-width="3"
+           id="circle13" />
+        <circle
+           cx="155"
+           cy="100"
+           r="20"
+           stroke-width="3"
+           id="circle14" />
+        <circle
+           cx="245"
+           cy="100"
+           r="20"
+           stroke-width="3"
+           id="circle15" />
+        <circle
+           cx="345"
+           cy="100"
+           r="20"
+           stroke-width="3"
+           id="circle16" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:2.72374px;line-height:normal;font-family:'Gill Sans MT';-inkscape-font-specification:'Gill Sans MT, Normal';text-decoration-color:#000000;opacity:1;fill:#a02c2c;fill-opacity:1;stroke:#a02c2c;stroke-width:0.165446;stroke-dasharray:none;paint-order:markers fill stroke;stop-color:#000000"
+         x="170.95468"
+         y="232.33707"
+         id="text15"
+         transform="scale(1.0034783,0.99653371)"><tspan
+           sodipodi:role="line"
+           id="tspan15"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72374px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a02c2c;fill-opacity:1;stroke:#a02c2c;stroke-width:0.165446;stroke-dasharray:none"
+           x="170.95468"
+           y="232.33707">LUNGHAA</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72374px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a02c2c;fill-opacity:1;stroke:#a02c2c;stroke-width:0.165446;stroke-dasharray:none"
+           x="170.95468"
+           y="235.78127"
+           id="tspan16">HINGDAI</tspan></text>
+    </g>
+  </g>
+</svg>

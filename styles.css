@@ -1,0 +1,14 @@
+.banner {
+  /*background-image: url('');*/
+  background-size: cover;
+  background-position: center;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Adjust as needed */
+}
