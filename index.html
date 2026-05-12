@@ -1,74 +1,103 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a id="home"></a>
-    <div class="banner">
-      <img src="assets/lhlogo_with_text.png" alt="Logo">
-    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunghaa Hingdai — Boutique Publisher, Hong Kong</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <div class="wrapper">
-      <div>
-        <p class="opening-paragraph">
-        We are a boutique publishing house based in Hong Kong. If you have arrived here after reading one of our books, welcome! We're always on the lookout for new authors.  If you have always wanted to become a published author, why not <a href="mailto:info@lunghaahingdai.com">get in touch?</a>
-        </p>
-      </div>
-
-      <nav class="navbar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo-link">
+        <img src="assets/lhlogo_with_text.png" alt="Lunghaa Hingdai" class="logo">
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+    </div>
+  </header>
 
-      <div class = "book-section">
-        <div class = "book-title">Superkathy and the Southern Trapezoid</div>
-        <div class = "author">R. T. Vale</div>
-        <div class="book-and-blurb">
-          <img src="assets/stcover3.png" class="cover">
-          <div class = "blurb">
-          <p>Superkathy has sworn to use her powers for the good of humanity. Her friend and housemate Dr. Squiddy is the world's most brilliant squid-headed scientist. A request for help from the Tanzanian wildlife service catapults them into a thrilling globetrotting adventure. Risking life and limb, they discover that behind it all looms a dark, murderous force which threatens to destroy not only London, but the fabric of time and space itself!  But that is not all! Because someone has big plans for Superkathy... </p>
-          </div> 
-        </div>
-        <div class="buy-button-container">
-          <div class="buy-button">
-            Buy paperback (coming soon!)
+  <main>
+
+    <section id="home" class="intro-section">
+      <div class="container container--narrow">
+        <p class="intro-text">
+          We are a boutique publishing house based in Hong Kong. If you have arrived here after reading one of our books, welcome! We're always on the lookout for new authors. If you have always wanted to become a published author, why not <a href="mailto:info@lunghaahingdai.com">get in touch?</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="books" class="books-section">
+      <div class="container">
+        <h2 class="section-heading">Our Books</h2>
+
+        <!--
+          =====================================================================
+          BOOK CARD — copy this entire <article> block to add a new book.
+          Update: src in <img>, alt text, title, author, description, and hrefs.
+          =====================================================================
+        -->
+        <article class="book-card">
+          <div class="book-card__cover">
+            <img src="assets/stcover3.png" alt="Cover of Superkathy and the Southern Trapezoid">
           </div>
-          <div class="buy-button" style="margin-bottom:20px;">
-            Buy ebook (coming soon!)
+          <div class="book-card__info">
+            <h3 class="book-card__title">Superkathy and the Southern Trapezoid</h3>
+            <p class="book-card__author">R. T. Vale</p>
+            <p class="book-card__description">
+              Superkathy has sworn to use her powers for the good of humanity. Her friend and housemate Dr. Squiddy is the world's most brilliant squid-headed scientist. A request for help from the Tanzanian wildlife service catapults them into a thrilling globetrotting adventure. Risking life and limb, they discover that behind it all looms a dark, murderous force which threatens to destroy not only London, but the fabric of time and space itself! But that is not all. Because someone has big plans for Superkathy&hellip;
+            </p>
+            <div class="buy-buttons">
+              <a class="btn btn--primary"> <!-- href="buy-superkathy.html?format=paperback"> -->Buy Paperback (coming soon)</a>
+              <a class="btn btn--secondary"><!--</a> href="buy-superkathy.html?format=ebook" class="btn btn--secondary">-->Buy E-book (coming soon)</a>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
+        <!-- END BOOK CARD -->
 
-      <a id="about"></a>
-      <div class="normal-paragraph">
-        <h2>About</h2>
-        <p>
-          We established our business in 2026. Our name means <i>Lobster Brothers</i>.
-        </p>
       </div>
+    </section>
 
-      <a id="services"></a>
-      <div class="normal-paragraph">
-        <h2>Services</h2>
-        <p>
-          Enquiries are always welcome. We can help you obtain an ISBN and publish your book in Hong Kong, even if you are from overseas. We endeavour to answer all enquiries within seven days.
-        </p>
+    <section id="about" class="content-section content-section--alt">
+      <div class="container container--narrow">
+        <h2 class="section-heading">About</h2>
+        <p>We established our business in 2026. Our name means <em>Lobster Brothers</em>.</p>
       </div>
+    </section>
 
-      <a id="contact"></a>
-      <div class="normal-paragraph">
-        <h2>Contact</h2>
-        <p>
-          Drop us a line via email at <a href="mailto:info@lunghaahingdai.com">info@lunghaahingdai.com</a> or find us on Instagram.
-        </p>
+    <section id="services" class="content-section">
+      <div class="container container--narrow">
+        <h2 class="section-heading">Services</h2>
+        <p>Enquiries are always welcome. We can help you obtain an ISBN and publish your book in Hong Kong, even if you are from overseas. We endeavour to answer all enquiries within seven days.</p>
       </div>
+    </section>
 
-    </div> <!-- closes wrapper -->
-  </body>
+    <section id="contact" class="content-section content-section--alt">
+      <div class="container container--narrow">
+        <h2 class="section-heading">Contact</h2>
+        <p>Drop us a line via email at <a href="mailto:info@lunghaahingdai.com">info@lunghaahingdai.com</a> or find us on Instagram.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Lunghaa Hingdai. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>

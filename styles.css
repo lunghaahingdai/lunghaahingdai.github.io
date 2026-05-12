@@ -1,151 +1,452 @@
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --font-heading: 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Lato', system-ui, -apple-system, sans-serif;
+
+  --color-bg:       #FAFAF8;
+  --color-bg-alt:   #F3F0EB;
+  --color-text:     #1C1C1C;
+  --color-muted:    #5A5A5A;
+  --color-accent:   #7A1C1C;
+  --color-accent-d: #5E1515;
+  --color-border:   #DDD9D3;
+
+  --max-width:        1100px;
+  --max-width-narrow: 720px;
+
+  --header-height: 80px;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif !important;
-}
-
-.banner {
-  /*background-image: url('');*/
-  background-size: cover;
-  background-position: center;
-  background-color: #f2f2f2;
-  width: 95vw;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-}
-
-.book-section {
-    /*background-image: url('');*/
-  background-size: cover;
-  background-position: center;
-  background-color: #f2f2f2;
-  width: 95vw;
-  max-width: 600px;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-}
-
-.book-title {
-  font-weight: bold;
-  font-size: 200%;
-  padding: 10px;
-  text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.author {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 20px;
-}
-
-.blurb {
-  padding: 10px 20px;
-  margin: 30px;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 15px;
-  width: 75%;
-  max-width: 500px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 90%;
-}
-
-.book-and-blurb {
-    /*background-image: url('');*/
-  background-size: cover;
-  background-position: center;
-  background-color: #f2f2f2;
-  width: 100%;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%; /* Adjust as needed */
-}
-
-.opening-paragraph {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; /* Adjust as needed */
-  text-align: justify;
-}
-
-.normal-paragraph {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50vw; /* Adjust as needed */
-  text-align: justify;
-}
-
-.navbar {
-  width: 50vw;
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar ul {
-  list-style-type: none; /* Removes bullet points */
-  margin: 10px;
-  padding: 10px;
-  display: flex; /* Makes the list items horizontal */
-  background-color: white;
-  gap: 10px;
-}
-
-.navbar li a {
-  display: block; /* Makes the whole area clickable */
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  background-color: #333;
-}
-
-.navbar li a:hover {
-  background-color: #111; /* Adds a hover effect */
-}
-
-.wrapper {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 95vw;
-  min-height: 100vh;
-}
-
-.cover {
-  width: 60vw;
-  min-width: 100px;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
 }
 
-.buy-button {
-  border : 2px solid white;
-  background-color:darkgray;
-  padding: 20px;
-  margin: 5px;
+a {
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
-.buy-button-container {
+a:hover {
+  text-decoration: underline;
+}
+
+/* Offset anchor targets so the sticky header doesn't hide them */
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+/* ============================================================
+   Header & Navigation
+   ============================================================ */
+.site-header {
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  padding-bottom: 100px;
+  padding-top: 40px;
+}
+
+.header-inner {
   display: flex;
-  justify-content: left;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  height: 100%;
+  padding-bottom: 20px;
 }
 
+.logo-link {
+  display: block;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.logo {
+  height: 52px;
+  width: auto;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.75rem;
+}
+
+.site-nav a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-decoration: none;
+  padding-block: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ============================================================
+   Intro Section
+   ============================================================ */
+.intro-section {
+  padding-block: 4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.intro-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.9;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.intro-text a {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   Section Headings
+   ============================================================ */
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ============================================================
+   Books Section
+   ============================================================ */
+.books-section {
+  padding-block: 4rem;
+}
+
+/* Single-column by default (mobile) */
+.book-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.book-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.book-card__cover {
+  width: 100%;
+  max-width: 240px;
+  margin-inline: auto;
+}
+
+.book-card__cover img {
+  border-radius: 2px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+}
+
+.book-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.book-card__author {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.book-card__description {
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 58ch;
+  margin-bottom: 1.75rem;
+}
+
+/* ============================================================
+   Buy Buttons
+   ============================================================ */
+.buy-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 2px solid var(--color-accent);
+  transition: background-color 0.15s, color 0.15s;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-d);
+  border-color: var(--color-accent-d);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ============================================================
+   Content Sections (About / Services / Contact)
+   ============================================================ */
+.content-section {
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.content-section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.content-section p {
+  line-height: 1.8;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  background-color: var(--color-text);
+  color: #aaa;
+  text-align: center;
+  padding-block: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.site-footer a {
+  color: #aaa;
+}
+
+/* ============================================================
+   Buy Page — Hero
+   ============================================================ */
+.buy-hero {
+  padding-block: 3.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.buy-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.buy-hero__cover {
+  max-width: 200px;
+  margin-inline: auto;
+}
+
+.buy-hero__cover img {
+  border-radius: 2px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+}
+
+.buy-hero__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.buy-hero__title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.buy-hero__author {
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.buy-hero__tagline {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  max-width: 48ch;
+}
+
+/* ============================================================
+   Buy Page — Options
+   ============================================================ */
+.buy-options-section {
+  padding-block: 3.5rem;
+}
+
+.buy-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.buy-option {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1.75rem;
+  background-color: var(--color-bg);
+}
+
+.buy-option__header {
+  margin-bottom: 1rem;
+}
+
+.buy-option__badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+}
+
+.buy-option__badge--alt {
+  background-color: #1a1a1a;
+}
+
+.buy-option__desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.buy-option__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ============================================================
+   Desktop layout (≥ 700px)
+   ============================================================ */
+@media (min-width: 700px) {
+  .logo {
+    height: 60px;
+  }
+
+  /* Side-by-side: cover left, info right */
+  .book-card {
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+  }
+
+  .book-card__cover {
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .book-card {
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+  }
+
+  .buy-hero__inner {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .buy-hero__cover {
+    margin-inline: 0;
+  }
+
+  .buy-options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
